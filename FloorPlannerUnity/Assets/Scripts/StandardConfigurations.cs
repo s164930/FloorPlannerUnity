@@ -6,9 +6,11 @@ public class StandardConfigurations : MonoBehaviour {
     AndroidJavaClass UnityPlayer;
     AndroidJavaObject extras, currentActivity, intent;
     public static int projectID = 1, pngCount;
+    public static string[] pdfNames;
     // Use this for initialization
     void Awake()
     {
+        
         if (Application.platform == RuntimePlatform.Android)
         {
             Debug.Log("We are in an android environment, getting extras");
@@ -21,6 +23,8 @@ public class StandardConfigurations : MonoBehaviour {
                 Debug.Log("There are extras in the intent, from unity");
                 extras = intent.Call<AndroidJavaObject>("getExtras");
                 pngCount = extras.Call<int>("getInt", "pngCount");
+                pdfNames = new string[pngCount];
+                pdfNames = extras.Call<string[]>("getStringArray", "pdfNames").Clone() as string[];
                 projectID = extras.Call<int>("getInt", "Projectid");
             }
         }
