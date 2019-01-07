@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class StandardConfigurations : MonoBehaviour {
     bool hasExtra;

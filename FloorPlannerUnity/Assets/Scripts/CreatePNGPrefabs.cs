@@ -11,7 +11,7 @@ public class CreatePNGPrefabs : MonoBehaviour
     public static List<byte[]> pngArray;
     public PlanPrefabScript pngPrefab;
     public Material planMaterial;
-    // Start is called before the first frame update
+
     void Start()
     {
         plans = new List<PlanPrefabScript>();

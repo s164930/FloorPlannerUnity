@@ -7,7 +7,7 @@ public class ButtonControllerScript : MonoBehaviour
 {
     public GameObject buttonPrefab;
     public GameObject buttonContainer;
-    // Start is called before the first frame update
+
     void Start()
     {
         for(int i = 0; i < StandardConfigurations.pngCount; i++)
